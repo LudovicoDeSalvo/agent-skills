@@ -1,0 +1,7 @@
+interface:
+  display_name: "Project Memory"
+  short_description: "Maintain portable project context between sessions"
+  default_prompt: "Use $project-memory to initialize or refresh the durable context for this project."
+
+policy:
+  allow_implicit_invocation: true
