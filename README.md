@@ -4,12 +4,12 @@ A shared skill for Claude Code and Codex that maintains Markdown project context
 
 ## Install
 
-Requires Node.js/npm and Git. Replace `YOUR_USERNAME/agent-skills` with this public repository's owner/name. No GitHub login is required.
+Requires Node.js/npm and Git.
 
 Install for both agents across all local projects:
 
 ```bash
-npx --yes skills add YOUR_USERNAME/agent-skills --skill project-memory --agent claude-code codex --global --copy --yes
+npx --yes skills add LudovicoDeSalvo/agent-skills --skill project-memory --agent claude-code codex --global --copy --yes
 ```
 
 Verify installation:
