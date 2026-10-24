@@ -59,10 +59,10 @@ Each fact has exactly one canonical home; other files link to it instead of rest
 - Mechanism (how something works): ARCHITECTURE. Rationale (why it was chosen): DECISIONS, naming the mechanism in one line and linking ARCHITECTURE. CHANGELOG states the user-visible change in one line. None of the three repeats the others.
 - Release history: `CHANGELOG.md` only. No "since vX" notes elsewhere.
 - Commands: `AGENTS.md` or an existing runbook. README's quick start shows at most the 1–3 commands needed for a first run and links there.
-- Technical invariants and platform constraints: ARCHITECTURE. `AGENTS.md` lists only rules that change how an agent acts (approval gates, release steps) and links to ARCHITECTURE for the rest.
+- Technical invariants and platform constraints: ARCHITECTURE. `AGENTS.md` lists only rules that change how an agent acts (approval gates, release steps) and links to ARCHITECTURE for the rest. When moving an invariant, constraint, or hazard out of AGENTS or STATUS, write it into ARCHITECTURE in the same edit, and confirm it is there before deleting the original.
 - Path map: TREE or its ARCHITECTURE equivalent. README links to it instead of keeping its own layout table.
 - Operational inventory (services, endpoints, ports, scheduled jobs) and durable discoveries (existing data, schemas, external systems, environment limits, operational pitfalls): ARCHITECTURE or an existing reference doc; `AGENTS.md` may carry a one-line pointer. Never a STATUS section.
-- Counts and enumerations (models, parameters, devices): write "see X" rather than a number that will go stale.
+- Counts that drift (number of models, parameters, devices): write "see X" rather than a number that will go stale. Identifiers that code or configuration depends on (stage, action, asset, or configuration record ids) are facts, not counts: keep them listed in ARCHITECTURE.
 
 ### Durable, portable content
 
